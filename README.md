@@ -11,12 +11,12 @@ Vous êtes responsable de coder des librairies qui serviront une équipe dévelo
 
 * La classe **Walker.cs** est pour l'instant inutile. Ne vous en préocuppez pas.
 
-* La classe **Bagpack.cs** est conçue pour se comporter comme un sac à dos qui pourra intégrer aussi bien du matériel en tout genre (gourde, couverture, jumelles,...) tout comme des vêements.
+* La classe **Bagpack.cs** est conçue pour se comporter comme un sac à dos qui pourra intégrer aussi bien du matériel en tout genre (gourde, couverture, jumelles,...) que des vêtements.
 
-* Les classes **Equipment** et **Cloth** quant à elles simulent des équipments et les habits à chager dans le sac à dos.
+* Les classes **Equipment** et **Cloth** quant à elles simulent des équipments et les habits à charger dans le sac à dos.
 
 ### Aides métier
-1) On ne peut actuellement qu'ajouter des éléments au sac à dos.
+1) On ne peut actuellement qu'ajouter des éléments au sac à dos. Retirer des éléments n'est pas attendu.
 
 2) L'ajout d'un équipement dans le sac à dos, réduit progressivement sa capacité de charge.
 
@@ -24,8 +24,8 @@ Vous êtes responsable de coder des librairies qui serviront une équipe dévelo
 
 4) Prenez garde aux différentes exceptions à traiter.
    * Un équipement doit avoir un poids positif.
-   * Un sac à dos à une charge limite.
-   * Un vêtement peut être traité pour être résistant à la pluie. Inutile de le faire sur un vêtement qui est déjà résistant à la pluie.
+   * Un sac à dos à une charge limite à ne pas dépasser.
+   * Un vêtement peut être traité pour être résistant à la pluie. Inutile de le faire sur un vêtement qui l'est déjà.
 
 ### Prise en main du code
 
@@ -35,7 +35,7 @@ Vous êtes responsable de coder des librairies qui serviront une équipe dévelo
     git clone https://NGY_CPNV@bitbucket.org/cpnv_ngy/226a_walkinginthewild.git
 ```
 
-2) Réaliser la première compilation. Il est important que le réseau soit disponible. Le gestionnaire de dépendences (Nguet) en a besoin fonctionner correctement.
+2) Réaliser la première compilation. Il est important que le réseau soit disponible. Le gestionnaire de dépendences (Nguet) en a besoin pour fonctionner correctement.
 
 ```
 2>------ Build started: Project: TestWalkingInTheWild, Configuration: Debug Any CPU ------
@@ -44,7 +44,7 @@ Vous êtes responsable de coder des librairies qui serviront une équipe dévelo
 ========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-3) lancer ensuite tous les tests du projet
+3) Lancer ensuite tous les tests du projet
 
 ![StartSituation](./Docs/StartSituation.PNG)
 
@@ -58,7 +58,7 @@ Vous êtes responsable de coder des librairies qui serviront une équipe dévelo
 ### Livrables attendus
 Une archive compressée contenant **uniquement** les deux classes métiers([nomDeFamille_TDD].zip).
 
-Modalités de livraison à définir avec l'animateur.
+Modalités de livraison spécifique sont à définir avec votre animateur/trice.
 
 ### Evaluation
 
@@ -68,7 +68,7 @@ Modalités de livraison à définir avec l'animateur.
 
 Conditions d'acceptations:
 
-* Respect des principes POO (encapsulation).
+* Respect des principes POO.
 * Les classes de tests ne doivent avoir subi aucune modification.
 * L'architecture des classes productives ne doit pas avoir été modifiée (signature des fonctions)
 
