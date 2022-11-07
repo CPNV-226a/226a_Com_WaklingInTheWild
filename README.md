@@ -56,7 +56,7 @@ Vous êtes responsable de coder des librairies qui serviront une équipe dévelo
 * 45 minutes
 
 ### Livrables attendus
-Une archive compressée contenant **uniquement** les deux classes métiers([nomDeFamille_TDD].zip).
+Une archive compressée contenant **uniquement** les trois classes métiers([nomDeFamille_TDD].zip).
 
 Modalités de livraison spécifique sont à définir avec votre animateur/trice.
 
