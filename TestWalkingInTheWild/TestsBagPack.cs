@@ -17,11 +17,11 @@ namespace TestWalkingInTheWild
         }
 
         [Test]
-        public void AllProperties_AfterInstanciation_Success()
+        public void AllProperties_AfterInstantiation_Success()
         {
             //given
             //refer to Setup method
-
+            
             //when
             //Event is triggered directly by the assertion
 
