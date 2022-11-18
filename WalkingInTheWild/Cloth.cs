@@ -10,14 +10,15 @@
         //region public methods
         public Cloth(string brand, bool waterProof = false)
         {
-            throw new NotImplementedException();
+            _brand = brand;
+            _waterProof = waterProof;
         }
 
         public string Brand
         {
             get
             {
-                throw new NotImplementedException();
+                return _brand;
             }
         }
 
@@ -25,7 +26,7 @@
         {
             get
             {
-                throw new NotImplementedException();
+                return _waterProof;
             }
             set
             {
