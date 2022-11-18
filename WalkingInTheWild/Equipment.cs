@@ -10,6 +10,10 @@
         //region public methods
         public Equipment(string description, float weight)
         {
+            if (weight < 0)
+            {
+                throw new TooSmallerWeight();
+            }        
             _description = description;
             _weight = weight;
         }
