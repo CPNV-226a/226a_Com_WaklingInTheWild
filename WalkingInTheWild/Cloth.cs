@@ -30,7 +30,11 @@
             }
             set
             {
-                throw new NotImplementedException();
+                if (value && _waterProof)
+                {
+                    throw new AlreadyWaterProofException();
+                }
+                _waterProof = value;
             }
         }
         //endregion public methods
