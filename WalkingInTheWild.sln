@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WalkingInTheWild", "Walking
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWalkingInTheWild", "TestWalkingInTheWild\TestWalkingInTheWild.csproj", "{094FD408-6857-46AA-B378-5FE4A21F691A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7CAA0B26-BFB2-482D-A551-10520DC1152F}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\UML.asta = Docs\UML.asta
+		Docs\UML.PNG = Docs\UML.PNG
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
