@@ -53,7 +53,6 @@ namespace TestWalkingInTheWild
             //given
             //refer to Setup()
             Bagpack bagpack = new Bagpack(20.00f);
-            walker.TakeBagpack(bagpack);
             this.walker.TakeBagpack(bagpack);
             Assert.NotNull(walker.Bagpack);
 
@@ -64,6 +63,7 @@ namespace TestWalkingInTheWild
             Assert.Throws<WalkerNotReadyException>(() => this.walker.TakeBagpack(bagpack));
         }
         
+        /*
         [Test]        
         public void DropBagpack_WalkerIsCarringABagpack_WalkerDropsTheBagpack()
         {
@@ -84,6 +84,7 @@ namespace TestWalkingInTheWild
             //then
         }
 
+        
         [Test]
         public void LoadBagpack_BagpackAvailableLoadSingleCloth_ClothIsLoadedInBagpack()
         {
@@ -163,5 +164,6 @@ namespace TestWalkingInTheWild
 
             //then
         }
+        */
     }
 }

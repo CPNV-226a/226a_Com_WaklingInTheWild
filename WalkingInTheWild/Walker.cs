@@ -10,14 +10,14 @@
         #region public methods
         public Walker(string pseudo)
         {
-            throw new NotImplementedException();
+            _pseudo = pseudo;
         }
 
         public string Pseudo
         {
             get
             {
-                throw new NotImplementedException();
+                return _pseudo;
             }
         }
 
@@ -25,18 +25,22 @@
         {
             get
             {
-                throw new NotImplementedException();
+                return _backpack;
             }
         }
 
         public void TakeBagpack(Bagpack bagpack)
         {
-            throw new NotImplementedException();
+            if (_backpack != null)
+            {
+                throw new WalkerNotReadyException();
+            }
+            _backpack = bagpack;
         }
 
         public void DropBagpack()
         {
-            throw new NotImplementedException();
+            _backpack = null;
         }
 
         public void LoadBagpack(List<Cloth> cloths)
