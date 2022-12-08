@@ -54,6 +54,7 @@ namespace TestWalkingInTheWild
         {
             //given
             //refer to Setup()
+            _walker.TakeBagpack(_bagpack);
             Assert.NotNull(_walker.Bagpack);
 
             //when
@@ -89,8 +90,7 @@ namespace TestWalkingInTheWild
             //then
             Assert.Throws<WalkerDoesntCarryABagpackException>(() => _walker.DropBagpack());
         }
-
-        
+                
         [Test]
         public void LoadBagpack_BagpackAvailableLoadSingleCloth_ClothIsLoadedInBagpack()
         {
@@ -178,6 +178,5 @@ namespace TestWalkingInTheWild
             //then
             Assert.True(false);
         }
-        */
     }
 }
