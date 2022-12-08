@@ -87,7 +87,7 @@ namespace TestWalkingInTheWild
             //Event is called by the assertion
 
             //then
-            Assert.Throws<WalkerDoesntCarriesABagpackException>(() => _walker.DropBagpack());
+            Assert.Throws<WalkerDoesntCarryABagpackException>(() => _walker.DropBagpack());
         }
 
         
