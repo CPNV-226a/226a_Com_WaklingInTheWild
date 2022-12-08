@@ -61,7 +61,7 @@
         #region nested classes
         public class WalkerException:Exception{}
         public class WalkerAlreadyCarriesABagpackException : Exception { }
-        public class WalkerDoesntCarriesABagpackException : Exception { }
+        public class WalkerDoesntCarryABagpackException : Exception { }
         public class EmptyBagpackException : WalkerException { }
         #endregion nested classes
     }
