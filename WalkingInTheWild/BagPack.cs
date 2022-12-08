@@ -36,6 +36,10 @@ namespace WalkingInTheWild
         {
             get
             {
+                if (this.RemainingLoadCapacity < equipment.Weight)
+                {
+                    throw new MaximumLoadReachedException();
+                }
                 return _maxLoad - this.CurrentLoad;
             }
         }

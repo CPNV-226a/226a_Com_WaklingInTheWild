@@ -33,7 +33,7 @@ namespace TestWalkingInTheWild
         }
 
         [Test]
-        public void TakeBagpack_WalkerReady_BagpackTaken()
+        public void TakeBagpack_WalkerCanTakeABagpack_BagpackTaken()
         {
             //given
             //refer to Setup()
@@ -48,7 +48,7 @@ namespace TestWalkingInTheWild
         }
 
         [Test]
-        public void TakeBagpack_WalkerNotReady_ThrowException()
+        public void TakeBagpack_WalkerCannotTakeABagpack_ThrowException()
         {
             //given
             //refer to Setup()

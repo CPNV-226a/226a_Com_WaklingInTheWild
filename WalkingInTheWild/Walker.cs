@@ -4,20 +4,20 @@
     {
         #region private attributes
         private string _pseudo;
-        private Bagpack? _backpack;
+        private Bagpack? _bagpack;
         #endregion private attributes
 
         #region public methods
         public Walker(string pseudo)
         {
-            _pseudo = pseudo;
+            throw new NotImplementedException();
         }
 
         public string Pseudo
         {
             get
             {
-                return _pseudo;
+                throw new NotImplementedException();
             }
         }
 
@@ -25,22 +25,18 @@
         {
             get
             {
-                return _backpack;
+                throw new NotImplementedException();
             }
         }
 
         public void TakeBagpack(Bagpack bagpack)
         {
-            if (_backpack != null)
-            {
-                throw new WalkerNotReadyException();
-            }
-            _backpack = bagpack;
+            throw new NotImplementedException();
         }
 
         public void DropBagpack()
         {
-            _backpack = null;
+            throw new NotImplementedException();
         }
 
         public void LoadBagpack(List<Cloth> cloths)
