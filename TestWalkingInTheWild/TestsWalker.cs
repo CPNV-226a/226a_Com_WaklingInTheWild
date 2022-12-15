@@ -184,5 +184,19 @@ namespace TestWalkingInTheWild
             //then
             Assert.Throws<WalkerDoesntCarryABagpackException>(() => _walker.LoadBagpack(Utils.GenerateEquipment(1)));
         }
+
+        [Test]
+        public void LoadBagpack_ReachMaxLoad_ThrowException()
+        {
+            //given
+            _walker.TakeBagpack(_bagpack);
+            Assert.NotNull(_walker.Bagpack);
+            
+            //when
+            //Event is called by the assertion
+
+            //then
+            Assert.Throws<WalkerDoesntCarryABagpackException>(() => _walker.LoadBagpack(Utils.GenerateEquipment(50)));
+        }
     }
 }
