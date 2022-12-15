@@ -31,7 +31,7 @@ namespace TestWalkingInTheWild
             //constructor is called in Setup() 
 
             //then
-            Assert.AreEqual(_pseudo, _walker.Pseudo);
+            Assert.That(_walker.Pseudo, Is.EqualTo(_pseudo));
             Assert.IsNull(_walker.Bagpack);
         }
 
@@ -46,7 +46,7 @@ namespace TestWalkingInTheWild
             _walker.TakeBagpack(_bagpack);
 
             //then
-            Assert.AreEqual(_bagpack, _walker.Bagpack);
+            Assert.That(_walker.Bagpack, Is.EqualTo(_bagpack));
         }
 
         [Test]
@@ -97,15 +97,15 @@ namespace TestWalkingInTheWild
             //given
             _walker.TakeBagpack(_bagpack);
             Assert.NotNull(_walker.Bagpack);
-            Assert.AreEqual(0, _walker.Bagpack.Clothes.Count);
-            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Clothes.Count, Is.EqualTo(0));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad));
 
             //when
             _walker.LoadBagpack(Utils.GenerateClothes(1));
 
             //then
-            Assert.AreEqual(1, _walker.Bagpack.Clothes.Count);
-            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Clothes.Count, Is.EqualTo(1));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad));
         }
 
         [Test]
@@ -114,15 +114,15 @@ namespace TestWalkingInTheWild
             //given
             _walker.TakeBagpack(_bagpack);
             Assert.NotNull(_walker.Bagpack);
-            Assert.AreEqual(0, _walker.Bagpack.Clothes.Count);
-            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Clothes.Count, Is.EqualTo(0));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad));
 
             //when
             _walker.LoadBagpack(Utils.GenerateClothes(10));
 
             //then
-            Assert.AreEqual(10, _walker.Bagpack.Clothes.Count);
-            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Clothes.Count, Is.EqualTo(10));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad));
         }
 
         [Test]
@@ -144,15 +144,15 @@ namespace TestWalkingInTheWild
             //given
             _walker.TakeBagpack(_bagpack);
             Assert.NotNull(_walker.Bagpack);
-            Assert.AreEqual(0, _walker.Bagpack.Equipments.Count);
-            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Equipments.Count, Is.EqualTo(0));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad));
 
             //when
             _walker.LoadBagpack(Utils.GenerateEquipment(1));
 
             //then
-            Assert.AreEqual(1, _walker.Bagpack.Equipments.Count);
-            Assert.AreEqual(_maxLoad-1, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Equipments.Count, Is.EqualTo(1));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad - 1));
         }
 
         [Test]
@@ -161,15 +161,15 @@ namespace TestWalkingInTheWild
             //given
             _walker.TakeBagpack(_bagpack);
             Assert.NotNull(_walker.Bagpack);
-            Assert.AreEqual(0, _walker.Bagpack.Equipments.Count);
-            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Equipments.Count, Is.EqualTo(0));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad));
 
             //when
             _walker.LoadBagpack(Utils.GenerateEquipment(10));
 
             //then
-            Assert.AreEqual(1, _walker.Bagpack.Equipments.Count);
-            Assert.AreEqual(_maxLoad - 55, _walker.Bagpack.RemainingLoadCapacity);
+            Assert.That(_walker.Bagpack.Equipments.Count, Is.EqualTo(1));
+            Assert.That(_walker.Bagpack.RemainingLoadCapacity, Is.EqualTo(_maxLoad - 55));
         }
 
         [Test]
