@@ -130,14 +130,29 @@ namespace TestWalkingInTheWild
         {
             //given
             Assert.Null(_walker.Bagpack);
-            Assert.AreEqual(0, _walker.Bagpack.Clothes.Count);
-            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
 
             //when
             //Event is called by the assertion
 
             //then
-            Assert.Throws<WalkerAlreadyCarriesABagpackException>(() => _walker.LoadBagpack(Utils.GenerateClothes(1)));
+            Assert.Throws<WalkerDoesntCarryABagpackException>(() => _walker.LoadBagpack(Utils.GenerateClothes(1)));
+        }
+
+        [Test]
+        public void LoadBagpack_BagpackAvailableLoadSingleEquipment_EquipmentIsLoadedInBagpack()
+        {
+            //given
+            _walker.TakeBagpack(_bagpack);
+            Assert.NotNull(_walker.Bagpack);
+            Assert.AreEqual(0, _walker.Bagpack.Clothes.Count);
+            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+
+            //when
+            _walker.LoadBagpack(Utils.GenerateEquipment(1));
+
+            //then
+            Assert.AreEqual(1, _walker.Bagpack.Clothes.Count);
+            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
         }
     }
 }
