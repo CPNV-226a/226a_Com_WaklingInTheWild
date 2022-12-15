@@ -154,5 +154,22 @@ namespace TestWalkingInTheWild
             Assert.AreEqual(1, _walker.Bagpack.Equipments.Count);
             Assert.AreEqual(_maxLoad-1, _walker.Bagpack.RemainingLoadCapacity);
         }
+
+        [Test]
+        public void LoadBagpack_BagpackAvailableLoadMultipleEquipments_EquipmentAreLoadedInBagpack()
+        {
+            //given
+            _walker.TakeBagpack(_bagpack);
+            Assert.NotNull(_walker.Bagpack);
+            Assert.AreEqual(0, _walker.Bagpack.Equipments.Count);
+            Assert.AreEqual(_maxLoad, _walker.Bagpack.RemainingLoadCapacity);
+
+            //when
+            _walker.LoadBagpack(Utils.GenerateEquipment(10));
+
+            //then
+            Assert.AreEqual(1, _walker.Bagpack.Equipments.Count);
+            Assert.AreEqual(_maxLoad - 55, _walker.Bagpack.RemainingLoadCapacity);
+        }
     }
 }
