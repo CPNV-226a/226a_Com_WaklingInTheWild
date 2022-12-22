@@ -41,12 +41,18 @@
 
         public void LoadBagpack(List<Cloth> cloths)
         {
-            throw new NotImplementedException();
+            foreach (Cloth cloth in cloths)
+            {
+                _bagpack?.Add(cloth);
+            }
         }
 
         public void LoadBagpack(List<Equipment> equipments)
         {
-            throw new NotImplementedException();
+            foreach (Equipment equipment in equipments)
+            {
+                _bagpack?.Add(equipment);
+            }
         }
 
         public void EmptyBagpack()
